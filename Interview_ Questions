@@ -1,0 +1,39 @@
+1. What is a support vector?
+Support vectors are the data points that lie closest to the decision boundary (hyperplane). 
+They are critical in determining the position and orientation of the hyperplane. The SVM algorithm relies on these points to maximize the margin between classes.
+
+2. What does the C parameter do?
+The C parameter controls the trade-off between achieving a low training error and a large margin.
+A small C increases the margin but allows more misclassification.
+A large C tries to classify all training examples correctly but may lead to overfitting.
+
+3. What are kernels in SVM?
+Kernels are functions that transform data into a higher-dimensional space to make it linearly separable. Common kernels:
+Linear: For linearly separable data.
+RBF (Radial Basis Function): For non-linear data.
+Polynomial: Allows curved boundaries.
+
+4. What is the difference between linear and RBF kernel?
+Linear Kernel: Assumes the data can be separated with a straight line (or hyperplane).
+RBF Kernel: Maps data to higher dimensions and can handle non-linear decision boundaries.
+In your project, linear SVM was good, but RBF SVM gave slightly better accuracy by capturing non-linear patterns.
+
+5. What are the advantages of SVM?
+Effective in high-dimensional spaces.
+Works well with clear margin separation.
+Memory efficient (uses only support vectors).
+Flexible through different kernel functions.
+
+6. Can SVMs be used for regression?
+Yes, SVMs can be used for regression tasks through Support Vector Regression (SVR). Instead of trying to find a separating hyperplane, SVR tries to fit the best function within a certain margin of tolerance.
+
+7. What happens when data is not linearly separable?
+SVM uses:
+Soft margin (controlled by C) to allow some misclassification.
+Kernels (like RBF or polynomial) to map data into higher dimensions where it becomes linearly separable.
+
+8. How is overfitting handled in SVM?
+Tuning C: A smaller C value avoids overfitting by allowing a softer margin.
+Choosing the right kernel and parameters (like gamma in RBF).
+Cross-validation: Helps ensure model generalizes well on unseen data.
+
